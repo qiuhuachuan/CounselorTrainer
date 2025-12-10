@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    container_name: ai-client-frontend
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
