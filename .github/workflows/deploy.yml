@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18 # Vite 推荐 Node 18+
+          node-version: 25 # Vite 推荐 Node 18+
 
       - name: Install dependencies
         run: npm install
